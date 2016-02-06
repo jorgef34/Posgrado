@@ -1,0 +1,50 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/FPGA/ALU/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/FPGA/ALU/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGA/ALU/seleccionador.vhd" in Library work.
+Architecture behavioral of Entity seleccionador is up to date.
+Compiling vhdl file "C:/FPGA/ALU/Desplazador.vhd" in Library work.
+Architecture behavioral of Entity desplazador is up to date.
+Compiling vhdl file "C:/FPGA/ALU/Mux_sum_rest.vhd" in Library work.
+Architecture behavioral of Entity mux_sum_rest is up to date.
+Compiling vhdl file "C:/FPGA/ALU/Sumador.vhd" in Library work.
+Architecture behavioral of Entity sumador is up to date.
+Compiling vhdl file "C:/FPGA/ALU/resultado.vhd" in Library work.
+Architecture behavioral of Entity resultado is up to date.
+Compiling vhdl file "C:/FPGA/ALU/Restador.vhd" in Library work.
+Architecture behavioral of Entity restador is up to date.
+Compiling vhdl file "C:/FPGA/ALU/normalizador.vhd" in Library work.
+Architecture behavioral of Entity normalizador is up to date.
+Compiling vhdl file "C:/FPGA/ALU/signo.vhd" in Library work.
+Architecture behavioral of Entity signo is up to date.
+Compiling vhdl file "C:/FPGA/ALU/Sumador_IEEE.vhd" in Library work.
+Architecture behavioral of Entity sumador_ieee is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> 
+
+Total memory usage is 212852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,2 @@
+vhdl isim_temp "Desplazador.vhd"
+vhdl isim_temp "test_desplazador.vhd"

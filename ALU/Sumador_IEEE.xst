@@ -1,0 +1,5 @@
+set -tmpdir "C:/FPGA/ALU/xst/projnav.tmp"
+set -xsthdpdir "C:/FPGA/ALU/xst"
+elaborate
+-ifn Sumador_IEEE.prj
+-ifmt mixed

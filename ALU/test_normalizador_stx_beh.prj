@@ -1,0 +1,2 @@
+vhdl isim_temp "normalizador.vhd"
+vhdl isim_temp "test_normalizador.vhd"

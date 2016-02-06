@@ -1,0 +1,646 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: seleccionador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "seleccionador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "seleccionador"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : seleccionador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Cursos/Sumador_restador_con deector de signo/seleccionador.vhd" in Library work.
+Architecture behavioral of Entity seleccionador is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <seleccionador> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <seleccionador> in library <work> (Architecture <behavioral>).
+Entity <seleccionador> analyzed. Unit <seleccionador> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <seleccionador>.
+    Related source file is "C:/Cursos/Sumador_restador_con deector de signo/seleccionador.vhd".
+INFO:Xst:1608 - Relative priorities of control signals on register <B_despl> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+INFO:Xst:1608 - Relative priorities of control signals on register <e_dif> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+WARNING:Xst:737 - Found 24-bit latch for signal <B_despl>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 24-bit latch for signal <A_max>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <NaN_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Infinito_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <e_dif>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <e_max>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator equal for signal <B_despl$cmp_eq0000> created at line 167.
+    Found 23-bit comparator greatequal for signal <B_despl$cmp_ge0000> created at line 158.
+    Found 23-bit comparator less for signal <B_despl$cmp_lt0000> created at line 167.
+    Found 8-bit comparator greater for signal <mux0000$cmp_gt0000> created at line 140.
+    Found 8-bit comparator less for signal <mux0000$cmp_lt0000> created at line 149.
+    Found 8-bit subtractor for signal <mux0002$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <seleccionador> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 2
+ 24-bit latch                                          : 2
+ 8-bit latch                                           : 2
+# Comparators                                          : 5
+ 23-bit comparator greatequal                          : 1
+ 23-bit comparator less                                : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 2
+ 24-bit latch                                          : 2
+ 8-bit latch                                           : 2
+# Comparators                                          : 5
+ 23-bit comparator greatequal                          : 1
+ 23-bit comparator less                                : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <seleccionador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block seleccionador, actual ratio is 26.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : seleccionador.ngr
+Top Level Output File Name         : seleccionador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 128
+
+Cell Usage :
+# BELS                             : 387
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 60
+#      LUT3                        : 91
+#      LUT4                        : 176
+#      MUXCY                       : 46
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 66
+#      LD                          : 1
+#      LDCPE                       : 64
+#      LDE                         : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 128
+#      IBUF                        : 62
+#      OBUF                        : 66
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                      186  out of    768    24%  
+ Number of Slice Flip Flops:              2  out of   1536     0%  
+ Number of 4 input LUTs:                328  out of   1536    21%  
+ Number of IOs:                         128
+ Number of bonded IOBs:                 128  out of    124   103% (*) 
+    IOB Flip Flops:                      64
+ Number of GCLKs:                         1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------+------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)  | Load  |
+---------------------------------------------+------------------------+-------+
+A_max_not0001(A_max_not00011:O)              | NONE(*)(Infinito_out)  | 1     |
+NaN_out_not0001(NaN_out_not00011:O)          | NONE(*)(NaN_out)       | 1     |
+B_despl_cmp_eq00001(B_despl_cmp_eq00008136:O)| BUFG(*)(e_max_0)       | 64    |
+---------------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+------------------------+-------+
+Control Signal                             | Buffer(FF name)        | Load  |
+-------------------------------------------+------------------------+-------+
+A_max_0__and0000(A_max_0__and00001:O)      | NONE(A_max_0)          | 1     |
+A_max_0__or0000(A_max_0__or00001:O)        | NONE(A_max_0)          | 1     |
+A_max_10__and0000(A_max_10__and00001:O)    | NONE(A_max_10)         | 1     |
+A_max_10__or0000(A_max_10__or00001:O)      | NONE(A_max_10)         | 1     |
+A_max_11__and0000(A_max_11__and00001:O)    | NONE(A_max_11)         | 1     |
+A_max_11__or0000(A_max_11__or00001:O)      | NONE(A_max_11)         | 1     |
+A_max_12__and0000(A_max_12__and00001:O)    | NONE(A_max_12)         | 1     |
+A_max_12__or0000(A_max_12__or00001:O)      | NONE(A_max_12)         | 1     |
+A_max_13__and0000(A_max_13__and00001:O)    | NONE(A_max_13)         | 1     |
+A_max_13__or0000(A_max_13__or00001:O)      | NONE(A_max_13)         | 1     |
+A_max_14__and0000(A_max_14__and00001:O)    | NONE(A_max_14)         | 1     |
+A_max_14__or0000(A_max_14__or00001:O)      | NONE(A_max_14)         | 1     |
+A_max_15__and0000(A_max_15__and00001:O)    | NONE(A_max_15)         | 1     |
+A_max_15__or0000(A_max_15__or00001:O)      | NONE(A_max_15)         | 1     |
+A_max_16__and0000(A_max_16__and00001:O)    | NONE(A_max_16)         | 1     |
+A_max_16__or0000(A_max_16__or00001:O)      | NONE(A_max_16)         | 1     |
+A_max_17__and0000(A_max_17__and00001:O)    | NONE(A_max_17)         | 1     |
+A_max_17__or0000(A_max_17__or00001:O)      | NONE(A_max_17)         | 1     |
+A_max_18__and0000(A_max_18__and00001:O)    | NONE(A_max_18)         | 1     |
+A_max_18__or0000(A_max_18__or00001:O)      | NONE(A_max_18)         | 1     |
+A_max_19__and0000(A_max_19__and00001:O)    | NONE(A_max_19)         | 1     |
+A_max_19__or0000(A_max_19__or00001:O)      | NONE(A_max_19)         | 1     |
+A_max_1__and0000(A_max_1__and00001:O)      | NONE(A_max_1)          | 1     |
+A_max_1__or0000(A_max_1__or00001:O)        | NONE(A_max_1)          | 1     |
+A_max_20__and0000(A_max_20__and00001:O)    | NONE(A_max_20)         | 1     |
+A_max_20__or0000(A_max_20__or00001:O)      | NONE(A_max_20)         | 1     |
+A_max_21__and0000(A_max_21__and00001:O)    | NONE(A_max_21)         | 1     |
+A_max_21__or0000(A_max_21__or00001:O)      | NONE(A_max_21)         | 1     |
+A_max_22__and0000(A_max_22__and00001:O)    | NONE(A_max_22)         | 1     |
+A_max_22__or0000(A_max_22__or00001:O)      | NONE(A_max_22)         | 1     |
+A_max_23__and0000(A_max_23__and00001:O)    | NONE(A_max_23)         | 1     |
+A_max_23__or0000(A_max_23__or00001:O)      | NONE(A_max_23)         | 1     |
+A_max_2__and0000(A_max_2__and00001:O)      | NONE(A_max_2)          | 1     |
+A_max_2__or0000(A_max_2__or00001:O)        | NONE(A_max_2)          | 1     |
+A_max_3__and0000(A_max_3__and00001:O)      | NONE(A_max_3)          | 1     |
+A_max_3__or0000(A_max_3__or00001:O)        | NONE(A_max_3)          | 1     |
+A_max_4__and0000(A_max_4__and00001:O)      | NONE(A_max_4)          | 1     |
+A_max_4__or0000(A_max_4__or00001:O)        | NONE(A_max_4)          | 1     |
+A_max_5__and0000(A_max_5__and00001:O)      | NONE(A_max_5)          | 1     |
+A_max_5__or0000(A_max_5__or00001:O)        | NONE(A_max_5)          | 1     |
+A_max_6__and0000(A_max_6__and00001:O)      | NONE(A_max_6)          | 1     |
+A_max_6__or0000(A_max_6__or00001:O)        | NONE(A_max_6)          | 1     |
+A_max_7__and0000(A_max_7__and00001:O)      | NONE(A_max_7)          | 1     |
+A_max_7__or0000(A_max_7__or00001:O)        | NONE(A_max_7)          | 1     |
+A_max_8__and0000(A_max_8__and00001:O)      | NONE(A_max_8)          | 1     |
+A_max_8__or0000(A_max_8__or00001:O)        | NONE(A_max_8)          | 1     |
+A_max_9__and0000(A_max_9__and00001:O)      | NONE(A_max_9)          | 1     |
+A_max_9__or0000(A_max_9__or00001:O)        | NONE(A_max_9)          | 1     |
+B_despl_0__and0000(B_despl_0__and00001:O)  | NONE(B_despl_0)        | 1     |
+B_despl_0__or0000(B_despl_0__or00001:O)    | NONE(B_despl_0)        | 1     |
+B_despl_10__and0000(B_despl_10__and00001:O)| NONE(B_despl_10)       | 1     |
+B_despl_10__or0000(B_despl_10__or00001:O)  | NONE(B_despl_10)       | 1     |
+B_despl_11__and0000(B_despl_11__and00001:O)| NONE(B_despl_11)       | 1     |
+B_despl_11__or0000(B_despl_11__or00001:O)  | NONE(B_despl_11)       | 1     |
+B_despl_12__and0000(B_despl_12__and00001:O)| NONE(B_despl_12)       | 1     |
+B_despl_12__or0000(B_despl_12__or00001:O)  | NONE(B_despl_12)       | 1     |
+B_despl_13__and0000(B_despl_13__and00001:O)| NONE(B_despl_13)       | 1     |
+B_despl_13__or0000(B_despl_13__or00001:O)  | NONE(B_despl_13)       | 1     |
+B_despl_14__and0000(B_despl_14__and00001:O)| NONE(B_despl_14)       | 1     |
+B_despl_14__or0000(B_despl_14__or00001:O)  | NONE(B_despl_14)       | 1     |
+B_despl_15__and0000(B_despl_15__and00001:O)| NONE(B_despl_15)       | 1     |
+B_despl_15__or0000(B_despl_15__or00001:O)  | NONE(B_despl_15)       | 1     |
+B_despl_16__and0000(B_despl_16__and00001:O)| NONE(B_despl_16)       | 1     |
+B_despl_16__or0000(B_despl_16__or00001:O)  | NONE(B_despl_16)       | 1     |
+B_despl_17__and0000(B_despl_17__and00001:O)| NONE(B_despl_17)       | 1     |
+B_despl_17__or0000(B_despl_17__or00001:O)  | NONE(B_despl_17)       | 1     |
+B_despl_18__and0000(B_despl_18__and00001:O)| NONE(B_despl_18)       | 1     |
+B_despl_18__or0000(B_despl_18__or00001:O)  | NONE(B_despl_18)       | 1     |
+B_despl_19__and0000(B_despl_19__and00001:O)| NONE(B_despl_19)       | 1     |
+B_despl_19__or0000(B_despl_19__or00001:O)  | NONE(B_despl_19)       | 1     |
+B_despl_1__and0000(B_despl_1__and00001:O)  | NONE(B_despl_1)        | 1     |
+B_despl_1__or0000(B_despl_1__or00001:O)    | NONE(B_despl_1)        | 1     |
+B_despl_20__and0000(B_despl_20__and00001:O)| NONE(B_despl_20)       | 1     |
+B_despl_20__or0000(B_despl_20__or00001:O)  | NONE(B_despl_20)       | 1     |
+B_despl_21__and0000(B_despl_21__and00001:O)| NONE(B_despl_21)       | 1     |
+B_despl_21__or0000(B_despl_21__or00001:O)  | NONE(B_despl_21)       | 1     |
+B_despl_22__and0000(B_despl_22__and00001:O)| NONE(B_despl_22)       | 1     |
+B_despl_22__or0000(B_despl_22__or00001:O)  | NONE(B_despl_22)       | 1     |
+B_despl_23__and0000(B_despl_23__and00001:O)| NONE(B_despl_23)       | 1     |
+B_despl_23__or0000(B_despl_23__or00001:O)  | NONE(B_despl_23)       | 1     |
+B_despl_2__and0000(B_despl_2__and00001:O)  | NONE(B_despl_2)        | 1     |
+B_despl_2__or0000(B_despl_2__or00001:O)    | NONE(B_despl_2)        | 1     |
+B_despl_3__and0000(B_despl_3__and00001:O)  | NONE(B_despl_3)        | 1     |
+B_despl_3__or0000(B_despl_3__or00001:O)    | NONE(B_despl_3)        | 1     |
+B_despl_4__and0000(B_despl_4__and00001:O)  | NONE(B_despl_4)        | 1     |
+B_despl_4__or0000(B_despl_4__or00001:O)    | NONE(B_despl_4)        | 1     |
+B_despl_5__and0000(B_despl_5__and00001:O)  | NONE(B_despl_5)        | 1     |
+B_despl_5__or0000(B_despl_5__or00001:O)    | NONE(B_despl_5)        | 1     |
+B_despl_6__and0000(B_despl_6__and00001:O)  | NONE(B_despl_6)        | 1     |
+B_despl_6__or0000(B_despl_6__or00001:O)    | NONE(B_despl_6)        | 1     |
+B_despl_7__and0000(B_despl_7__and00001:O)  | NONE(B_despl_7)        | 1     |
+B_despl_7__or0000(B_despl_7__or00001:O)    | NONE(B_despl_7)        | 1     |
+B_despl_8__and0000(B_despl_8__and00001:O)  | NONE(B_despl_8)        | 1     |
+B_despl_8__or0000(B_despl_8__or00001:O)    | NONE(B_despl_8)        | 1     |
+B_despl_9__and0000(B_despl_9__and00001:O)  | NONE(B_despl_9)        | 1     |
+B_despl_9__or0000(B_despl_9__or00001:O)    | NONE(B_despl_9)        | 1     |
+e_dif_0__and0000(e_dif_0__and00001:O)      | NONE(e_dif_0)          | 1     |
+e_dif_0__or0000(e_dif_0__or00001:O)        | NONE(e_dif_0)          | 1     |
+e_dif_1__and0000(e_dif_1__and00001:O)      | NONE(e_dif_1)          | 1     |
+e_dif_1__or0000(e_dif_1__or00001:O)        | NONE(e_dif_1)          | 1     |
+e_dif_2__and0000(e_dif_2__and00001:O)      | NONE(e_dif_2)          | 1     |
+e_dif_2__or0000(e_dif_2__or00001:O)        | NONE(e_dif_2)          | 1     |
+e_dif_3__and0000(e_dif_3__and00001:O)      | NONE(e_dif_3)          | 1     |
+e_dif_3__or0000(e_dif_3__or00001:O)        | NONE(e_dif_3)          | 1     |
+e_dif_4__and0000(e_dif_4__and00001:O)      | NONE(e_dif_4)          | 1     |
+e_dif_4__or0000(e_dif_4__or00001:O)        | NONE(e_dif_4)          | 1     |
+e_dif_5__and0000(e_dif_5__and00001:O)      | NONE(e_dif_5)          | 1     |
+e_dif_5__or0000(e_dif_5__or00001:O)        | NONE(e_dif_5)          | 1     |
+e_dif_6__and0000(e_dif_6__and00001:O)      | NONE(e_dif_6)          | 1     |
+e_dif_6__or0000(e_dif_6__or00001:O)        | NONE(e_dif_6)          | 1     |
+e_dif_7__and0000(e_dif_7__and00001:O)      | NONE(e_dif_7)          | 1     |
+e_dif_7__or0000(e_dif_7__or00001:O)        | NONE(e_dif_7)          | 1     |
+e_max_0__and0000(e_max_0__and00001:O)      | NONE(e_max_0)          | 1     |
+e_max_0__or0000(e_max_0__or00001:O)        | NONE(e_max_0)          | 1     |
+e_max_1__and0000(e_max_1__and00001:O)      | NONE(e_max_1)          | 1     |
+e_max_1__or0000(e_max_1__or00001:O)        | NONE(e_max_1)          | 1     |
+e_max_2__and0000(e_max_2__and00001:O)      | NONE(e_max_2)          | 1     |
+e_max_2__or0000(e_max_2__or00001:O)        | NONE(e_max_2)          | 1     |
+e_max_3__and0000(e_max_3__and00001:O)      | NONE(e_max_3)          | 1     |
+e_max_3__or0000(e_max_3__or00001:O)        | NONE(e_max_3)          | 1     |
+e_max_4__and0000(e_max_4__and00001:O)      | NONE(e_max_4)          | 1     |
+e_max_4__or0000(e_max_4__or00001:O)        | NONE(e_max_4)          | 1     |
+e_max_5__and0000(e_max_5__and00001:O)      | NONE(e_max_5)          | 1     |
+e_max_5__or0000(e_max_5__or00001:O)        | NONE(e_max_5)          | 1     |
+e_max_6__and0000(e_max_6__and00001:O)      | NONE(e_max_6)          | 1     |
+e_max_6__or0000(e_max_6__or00001:O)        | NONE(e_max_6)          | 1     |
+e_max_7__and0000(e_max_7__and00001:O)      | NONE(e_max_7)          | 1     |
+e_max_7__or0000(e_max_7__or00001:O)        | NONE(e_max_7)          | 1     |
+-------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 1.974ns (Maximum Frequency: 506.470MHz)
+   Minimum input arrival time before clock: 14.228ns
+   Maximum output required time after clock: 6.205ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'A_max_not0001'
+  Clock period: 1.974ns (frequency: 506.470MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.974ns (Levels of Logic = 1)
+  Source:            Infinito_out (LATCH)
+  Destination:       Infinito_out (LATCH)
+  Source Clock:      A_max_not0001 falling
+  Destination Clock: A_max_not0001 falling
+
+  Data Path: Infinito_out to Infinito_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.551   0.768  Infinito_out (Infinito_out_OBUF)
+     LUT4:I3->O            1   0.479   0.000  Infinito_out_mux0009 (Infinito_out_mux0009)
+     LD:D                      0.176          Infinito_out
+    ----------------------------------------
+    Total                      1.974ns (1.206ns logic, 0.768ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'NaN_out_not0001'
+  Clock period: 1.974ns (frequency: 506.470MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.974ns (Levels of Logic = 1)
+  Source:            NaN_out (LATCH)
+  Destination:       NaN_out (LATCH)
+  Source Clock:      NaN_out_not0001 falling
+  Destination Clock: NaN_out_not0001 falling
+
+  Data Path: NaN_out to NaN_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.551   0.768  NaN_out (NaN_out_OBUF)
+     LUT4:I3->O            1   0.479   0.000  NaN_out_mux00092 (NaN_out_mux0009)
+     LDE:D                     0.176          NaN_out
+    ----------------------------------------
+    Total                      1.974ns (1.206ns logic, 0.768ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'A_max_not0001'
+  Total number of paths / destination ports: 312 / 1
+-------------------------------------------------------------------------
+Offset:              12.182ns (Levels of Logic = 9)
+  Source:            A_in<21> (PAD)
+  Destination:       Infinito_out (LATCH)
+  Destination Clock: A_max_not0001 falling
+
+  Data Path: A_in<21> to Infinito_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   1.078  A_in_21_IBUF (A_in_21_IBUF)
+     LUT4:I0->O            1   0.479   0.976  mux0000_cmp_eq0001112 (mux0000_cmp_eq0001112)
+     LUT4:I0->O            2   0.479   1.040  mux0000_cmp_eq0001164 (N6)
+     LUT3:I0->O            6   0.479   0.912  mux0000_cmp_eq0001238 (N12)
+     LUT4:I2->O           51   0.479   1.963  B_despl_or0000125 (N14)
+     LUT4:I0->O            1   0.479   0.000  NaN_out_mux000911 (NaN_out_mux00091)
+     MUXF5:I1->O           2   0.314   0.804  NaN_out_mux00091_f5 (N31)
+     LUT3:I2->O            1   0.479   0.851  Infinito_out_mux0009_SW2 (N44)
+     LUT4:I1->O            1   0.479   0.000  Infinito_out_mux0009 (Infinito_out_mux0009)
+     LD:D                      0.176          Infinito_out
+    ----------------------------------------
+    Total                     12.182ns (4.558ns logic, 7.624ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'NaN_out_not0001'
+  Total number of paths / destination ports: 312 / 2
+-------------------------------------------------------------------------
+Offset:              10.963ns (Levels of Logic = 8)
+  Source:            A_in<21> (PAD)
+  Destination:       NaN_out (LATCH)
+  Destination Clock: NaN_out_not0001 falling
+
+  Data Path: A_in<21> to NaN_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   1.078  A_in_21_IBUF (A_in_21_IBUF)
+     LUT4:I0->O            1   0.479   0.976  mux0000_cmp_eq0001112 (mux0000_cmp_eq0001112)
+     LUT4:I0->O            2   0.479   1.040  mux0000_cmp_eq0001164 (N6)
+     LUT3:I0->O            6   0.479   0.912  mux0000_cmp_eq0001238 (N12)
+     LUT4:I2->O           51   0.479   1.963  B_despl_or0000125 (N14)
+     LUT4:I0->O            1   0.479   0.000  NaN_out_mux000911 (NaN_out_mux00091)
+     MUXF5:I1->O           2   0.314   0.915  NaN_out_mux00091_f5 (N31)
+     LUT4:I1->O            1   0.479   0.000  NaN_out_mux00092 (NaN_out_mux0009)
+     LDE:D                     0.176          NaN_out
+    ----------------------------------------
+    Total                     10.963ns (4.079ns logic, 6.884ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'B_despl_cmp_eq00001'
+  Total number of paths / destination ports: 23740 / 128
+-------------------------------------------------------------------------
+Offset:              14.228ns (Levels of Logic = 9)
+  Source:            B_in<21> (PAD)
+  Destination:       B_despl_0 (LATCH)
+  Destination Clock: B_despl_cmp_eq00001 falling
+
+  Data Path: B_in<21> to B_despl_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   1.078  B_in_21_IBUF (B_in_21_IBUF)
+     LUT4:I0->O            1   0.479   0.976  mux0000_cmp_eq0003112 (mux0000_cmp_eq0003112)
+     LUT4:I0->O            2   0.479   1.040  mux0000_cmp_eq0003164 (N7)
+     LUT3:I0->O            4   0.479   0.838  mux0000_cmp_eq000726 (mux0000_cmp_eq0007)
+     LUT3:I2->O            1   0.479   0.704  mux0000_and00051 (mux0000_and0005)
+     LUT4:I3->O            4   0.479   1.074  mux0000_or00021 (mux0000_or0002)
+     LUT4:I0->O           29   0.479   1.856  B_despl_or00091 (B_despl_or0009)
+     LUT3:I0->O           46   0.479   1.938  B_despl_mux0009<0>11 (N11)
+     LUT3:I0->O            2   0.479   0.000  B_despl_mux0009<9>1 (B_despl_mux0009<9>)
+     LDCPE:D                   0.176          B_despl_9
+    ----------------------------------------
+    Total                     14.228ns (4.723ns logic, 9.505ns route)
+                                       (33.2% logic, 66.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'NaN_out_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.205ns (Levels of Logic = 1)
+  Source:            NaN_out (LATCH)
+  Destination:       NaN_out (PAD)
+  Source Clock:      NaN_out_not0001 falling
+
+  Data Path: NaN_out to NaN_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.551   0.745  NaN_out (NaN_out_OBUF)
+     OBUF:I->O                 4.909          NaN_out_OBUF (NaN_out)
+    ----------------------------------------
+    Total                      6.205ns (5.460ns logic, 0.745ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'A_max_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.205ns (Levels of Logic = 1)
+  Source:            Infinito_out (LATCH)
+  Destination:       Infinito_out (PAD)
+  Source Clock:      A_max_not0001 falling
+
+  Data Path: Infinito_out to Infinito_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.551   0.745  Infinito_out (Infinito_out_OBUF)
+     OBUF:I->O                 4.909          Infinito_out_OBUF (Infinito_out)
+    ----------------------------------------
+    Total                      6.205ns (5.460ns logic, 0.745ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'B_despl_cmp_eq00001'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            e_dif_7 (LATCH)
+  Destination:       e_dif<7> (PAD)
+  Source Clock:      B_despl_cmp_eq00001 falling
+
+  Data Path: e_dif_7 to e_dif<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            1   0.551   0.681  e_dif_7 (e_dif_7)
+     OBUF:I->O                 4.909          e_dif_7_OBUF (e_dif<7>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.34 secs
+ 
+--> 
+
+Total memory usage is 260760 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

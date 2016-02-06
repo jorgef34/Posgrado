@@ -1,0 +1,2 @@
+vhdl isim_temp "Restador.vhd"
+vhdl isim_temp "test_restador.vhd"

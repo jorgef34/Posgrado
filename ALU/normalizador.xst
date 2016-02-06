@@ -1,0 +1,5 @@
+set -tmpdir "C:/Cursos/Sumador_restador_con deector de signo/xst/projnav.tmp"
+set -xsthdpdir "C:/Cursos/Sumador_restador_con deector de signo/xst"
+elaborate
+-ifn normalizador.prj
+-ifmt mixed

@@ -1,0 +1,29 @@
+Command line:
+   test_sumador_restador_signo_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49979
+
+Fri Jan 08 20:48:55 2016
+
+
+ Elaboration Time: 0.062401 sec
+
+ Current Memory Usage: 824.775 Meg
+
+ Total Signals          : 92
+ Total Nets             : 486
+ Total Signal Drivers   : 34
+ Total Blocks           : 14
+ Total Primitive Blocks : 12
+ Total Processes        : 17
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 988
+Total Line Count : 139
+
+ Total Simulation Time: 0.078001 sec
+
+ Current Memory Usage: 1139.35 Meg
+
+Fri Jan 08 20:49:05 2016
+

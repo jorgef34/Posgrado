@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/FPGA/PracticoFinal/Mux_sum_rest.xst" -ofn "C:/FPGA/PracticoFinal/Mux_sum_rest.syr" 

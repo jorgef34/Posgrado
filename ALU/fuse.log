@@ -1,0 +1,76 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/FPGA/ALU/test_alu_micro_isim_beh.exe -prj C:/FPGA/ALU/test_alu_micro_beh.prj work.test_alu_micro 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/FPGA/ALU/../KCPSM3/Assembler/INT_TEST.VHD" into library work
+Parsing VHDL file "C:/FPGA/ALU/Sumador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/signo.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/seleccionador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/salida_alu.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/resultado.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/Restador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/normalizador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/Mux_sum_rest.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/mux_in.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/kcpsm3.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/Desplazador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/Decodificador.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/Sumador_IEEE.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/kcpsm3_int_test.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/ALU_mas_Micro.vhd" into library work
+Parsing VHDL file "C:/FPGA/ALU/test_alu_micro.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package std_logic_signed
+Compiling architecture behavioral of entity seleccionador [seleccionador_default]
+Compiling architecture behavioral of entity desplazador [desplazador_default]
+Compiling architecture behavioral of entity Mux_sum_rest [mux_sum_rest_default]
+Compiling architecture behavioral of entity Sumador [sumador_default]
+Compiling architecture behavioral of entity resultado [resultado_default]
+Compiling architecture behavioral of entity Restador [restador_default]
+Compiling architecture behavioral of entity normalizador [normalizador_default]
+Compiling architecture behavioral of entity signo [signo_default]
+Compiling architecture behavioral of entity salida_alu [salida_alu_default]
+Compiling architecture behavioral of entity Sumador_IEEE [sumador_ieee_default]
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0001")(0,3)\]
+Compiling architecture fdr_v of entity FDR [\FDR('0')\]
+Compiling architecture fds_v of entity FDS [\FDS('1')\]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0000000010000000")(0,15)\]
+Compiling architecture fd_v of entity FD [\FD('0')\]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("00000100")(0,7)\]
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("1101")(0,3)\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture fdrse_v of entity FDRSE [\FDRSE('0')\]
+Compiling architecture ram16x1d_v of entity RAM16X1D [\RAM16X1D("0000000000000000")\]
+Compiling architecture ram64x1s_v of entity RAM64X1S [\RAM64X1S("000000000000000000000...]
+Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
+Compiling architecture ram32x1s_v of entity RAM32X1S [\RAM32X1S("000000000000000000000...]
+Compiling architecture low_level_definition of entity kcpsm3 [kcpsm3_default]
+Compiling architecture ramb16_s18_v of entity RAMB16_S18 [\RAMB16_S18("0000000000000000000...]
+Compiling architecture low_level_definition of entity int_test [int_test_default]
+Compiling architecture behavioral of entity Decodificador [decodificador_default]
+Compiling architecture behavioral of entity mux_in [mux_in_default]
+Compiling architecture behavioral of entity kcpsm3_int_test [kcpsm3_int_test_default]
+Compiling architecture behavioral of entity ALU_mas_Micro [alu_mas_micro_default]
+Compiling architecture behavior of entity test_alu_micro
+Time Resolution for simulation is 1ps.
+Waiting for 17 sub-compilation(s) to finish...
+Compiled 144 VHDL Units
+Built simulation executable C:/FPGA/ALU/test_alu_micro_isim_beh.exe
+Fuse Memory Usage: 63760 KB
+Fuse CPU Usage: 2448 ms

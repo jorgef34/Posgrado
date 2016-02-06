@@ -1,0 +1,29 @@
+Command line:
+   Sumador_IEEE_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49713
+
+Fri Jan 29 20:10:14 2016
+
+
+ Elaboration Time: 0.031201 sec
+
+ Current Memory Usage: 824.775 Meg
+
+ Total Signals          : 87
+ Total Nets             : 489
+ Total Signal Drivers   : 29
+ Total Blocks           : 14
+ Total Primitive Blocks : 13
+ Total Processes        : 16
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 990
+Total Line Count : 141
+
+ Total Simulation Time: 0.109201 sec
+
+ Current Memory Usage: 824.775 Meg
+
+Fri Jan 29 20:10:23 2016
+

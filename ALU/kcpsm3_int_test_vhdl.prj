@@ -1,0 +1,5 @@
+vhdl work "C:\FPGA\ALU\mux_in.vhd"
+vhdl work "C:\FPGA\ALU\kcpsm3.vhd"
+vhdl work "C:\FPGA\ALU\INT_TEST.VHD"
+vhdl work "C:\FPGA\ALU\Decodificador.vhd"
+vhdl work "C:\FPGA\ALU\kcpsm3_int_test.vhd"

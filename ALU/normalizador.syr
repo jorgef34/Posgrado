@@ -1,0 +1,447 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: normalizador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "normalizador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "normalizador"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-vq100
+
+---- Source Options
+Top Module Name                    : normalizador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGA/PracticoFinal/normalizador.vhd" in Library work.
+Entity <normalizador> compiled.
+Entity <normalizador> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <normalizador> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <normalizador> in library <work> (Architecture <behavioral>).
+Entity <normalizador> analyzed. Unit <normalizador> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <normalizador>.
+    Related source file is "C:/FPGA/PracticoFinal/normalizador.vhd".
+WARNING:Xst:646 - Signal <mantisa_aux<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 24-bit latch for signal <mantisa_aux>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit adder for signal <contador_ceros$addsub0000> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0001> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0002> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0003> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0004> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0005> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0006> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0007> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0008> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0009> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0010> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0011> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0012> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0013> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0014> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0015> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0016> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0017> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0018> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0019> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0020> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0021> created at line 70.
+    Found 8-bit adder for signal <contador_ceros$addsub0022> created at line 70.
+    Found 8-bit comparator greater for signal <error$cmp_gt0000> created at line 82.
+    Found 8-bit subtractor for signal <exponente_out$addsub0000> created at line 81.
+    Found 8-bit comparator less for signal <mantisa_aux$cmp_lt0000> created at line 77.
+    Found 24-bit shifter logical left for signal <mantisa_aux$shift0002> created at line 79.
+    Summary:
+	inferred  24 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <normalizador> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 24
+ 8-bit adder                                           : 23
+ 8-bit subtractor                                      : 1
+# Latches                                              : 1
+ 24-bit latch                                          : 1
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+# Logic shifters                                       : 1
+ 24-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 24
+ 8-bit adder                                           : 23
+ 8-bit subtractor                                      : 1
+# Latches                                              : 1
+ 24-bit latch                                          : 1
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+# Logic shifters                                       : 1
+ 24-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <mantisa_aux_23> of sequential type is unconnected in block <normalizador>.
+
+Optimizing unit <normalizador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block normalizador, actual ratio is 25.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : normalizador.ngr
+Top Level Output File Name         : normalizador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 64
+
+Cell Usage :
+# BELS                             : 435
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 42
+#      LUT3                        : 116
+#      LUT4                        : 215
+#      MUXCY                       : 23
+#      MUXF5                       : 27
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 23
+#      LD                          : 23
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 64
+#      IBUF                        : 32
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100evq100-4 
+
+ Number of Slices:                      210  out of    960    21%  
+ Number of Slice Flip Flops:             23  out of   1920     1%  
+ Number of 4 input LUTs:                375  out of   1920    19%  
+ Number of IOs:                          64
+ Number of bonded IOBs:                  64  out of     66    96%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------------------+------------------------+-------+
+Mcompar_mantisa_aux_cmp_lt0000_cy<7>1(Mcompar_mantisa_aux_cmp_lt0000_cy<7>:O)| BUFG(*)(mantisa_aux_0) | 23    |
+-----------------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 34.663ns
+   Maximum output required time after clock: 5.571ns
+   Maximum combinational path delay: 37.049ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Mcompar_mantisa_aux_cmp_lt0000_cy<7>1'
+  Total number of paths / destination ports: 188767204 / 23
+-------------------------------------------------------------------------
+Offset:              34.663ns (Levels of Logic = 27)
+  Source:            mantisa_desnormalizada<16> (PAD)
+  Destination:       mantisa_aux_8 (LATCH)
+  Destination Clock: Mcompar_mantisa_aux_cmp_lt0000_cy<7>1 rising
+
+  Data Path: mantisa_desnormalizada<16> to mantisa_aux_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.218   0.995  mantisa_desnormalizada_16_IBUF (mantisa_desnormalizada_16_IBUF)
+     LUT4:I0->O            1   0.704   0.424  contador_ceros_mux0018<4>2_SW0 (N247)
+     LUT4:I3->O            5   0.704   0.637  contador_ceros_mux0018<4>2 (N153)
+     LUT4:I3->O           17   0.704   1.086  contador_ceros_mux0026<4>5 (N150)
+     LUT3:I2->O            1   0.704   0.499  contador_ceros_mux0030<2>21 (N40)
+     LUT4:I1->O            1   0.704   0.455  Madd_contador_ceros_addsub0012_cy<2>151_SW1 (N229)
+     LUT4:I2->O            2   0.704   0.622  Madd_contador_ceros_addsub0012_cy<2>151 (N1431)
+     LUT2:I0->O            1   0.704   0.455  Madd_contador_ceros_addsub0012_cy<2>1_SW1 (N226)
+     LUT4:I2->O            3   0.704   0.706  Madd_contador_ceros_addsub0012_cy<2>1 (Madd_contador_ceros_addsub0012_cy<2>)
+     LUT4:I0->O            2   0.704   0.447  contador_ceros_mux0030<4>11 (N54)
+     MUXF5:S->O            6   0.739   0.844  contador_ceros_mux0030<4>_f5 (Madd_contador_ceros_addsub0014_lut<4>)
+     LUT3:I0->O            3   0.704   0.706  Madd_contador_ceros_addsub0018_cy<4>159 (Madd_contador_ceros_addsub0018_cy<4>159)
+     LUT4:I0->O            1   0.704   0.000  contador_ceros_mux0036<4>891 (contador_ceros_mux0036<4>891)
+     MUXF5:I1->O           2   0.321   0.622  contador_ceros_mux0036<4>89_f5 (contador_ceros_mux0036<4>89)
+     LUT3:I0->O            4   0.704   0.762  contador_ceros_mux0036<4>101 (Madd_contador_ceros_addsub0020_lut<4>)
+     LUT4:I0->O            3   0.704   0.610  contador_ceros_mux0038<5>1 (N14)
+     LUT4:I1->O            1   0.704   0.455  contador_ceros_mux0038<5>57_SW0 (N273)
+     LUT4:I2->O            5   0.704   0.808  contador_ceros_mux0038<5>57 (Madd_contador_ceros_addsub0017_lut<5>)
+     LUT4:I0->O            2   0.704   0.451  contador_ceros_mux0042<6>11 (N24)
+     LUT4:I3->O            1   0.704   0.455  contador_ceros_mux0042<7>39_SW0 (N351)
+     LUT4:I2->O            4   0.704   0.666  contador_ceros_mux0042<7>39 (Madd_contador_ceros_addsub0021_lut<7>)
+     LUT4:I1->O            1   0.704   0.424  mantisa_aux_or0000108_SW0 (N289)
+     LUT4:I3->O            1   0.704   0.424  mantisa_aux_or0000108 (mantisa_aux_or0000108)
+     LUT4:I3->O           14   0.704   1.079  mantisa_aux_or0000120 (mantisa_aux_or0000)
+     LUT3:I1->O            8   0.704   0.932  mantisa_aux_shift0001<19>41 (N138)
+     LUT4:I0->O            1   0.704   0.000  mantisa_aux_shift0001<8>11 (mantisa_aux_shift0001<8>1)
+     MUXF5:I1->O           1   0.321   0.000  mantisa_aux_shift0001<8>1_f5 (mantisa_aux_shift0001<8>)
+     LD:D                      0.308          mantisa_aux_8
+    ----------------------------------------
+    Total                     34.663ns (19.099ns logic, 15.564ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Mcompar_mantisa_aux_cmp_lt0000_cy<7>1'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              5.571ns (Levels of Logic = 2)
+  Source:            mantisa_aux_22 (LATCH)
+  Destination:       mantisa_normalizada<22> (PAD)
+  Source Clock:      Mcompar_mantisa_aux_cmp_lt0000_cy<7>1 rising
+
+  Data Path: mantisa_aux_22 to mantisa_normalizada<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.499  mantisa_aux_22 (mantisa_aux_22)
+     LUT3:I1->O            1   0.704   0.420  mantisa_normalizada<22>1 (mantisa_normalizada_22_OBUF)
+     OBUF:I->O                 3.272          mantisa_normalizada_22_OBUF (mantisa_normalizada<22>)
+    ----------------------------------------
+    Total                      5.571ns (4.652ns logic, 0.919ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 458582838 / 32
+-------------------------------------------------------------------------
+Delay:               37.049ns (Levels of Logic = 27)
+  Source:            mantisa_desnormalizada<16> (PAD)
+  Destination:       error (PAD)
+
+  Data Path: mantisa_desnormalizada<16> to error
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.218   0.995  mantisa_desnormalizada_16_IBUF (mantisa_desnormalizada_16_IBUF)
+     LUT4:I0->O            1   0.704   0.424  contador_ceros_mux0018<4>2_SW0 (N247)
+     LUT4:I3->O            5   0.704   0.637  contador_ceros_mux0018<4>2 (N153)
+     LUT4:I3->O           17   0.704   1.086  contador_ceros_mux0026<4>5 (N150)
+     LUT3:I2->O            1   0.704   0.499  contador_ceros_mux0030<2>21 (N40)
+     LUT4:I1->O            1   0.704   0.455  Madd_contador_ceros_addsub0012_cy<2>151_SW1 (N229)
+     LUT4:I2->O            2   0.704   0.622  Madd_contador_ceros_addsub0012_cy<2>151 (N1431)
+     LUT2:I0->O            1   0.704   0.455  Madd_contador_ceros_addsub0012_cy<2>1_SW1 (N226)
+     LUT4:I2->O            3   0.704   0.706  Madd_contador_ceros_addsub0012_cy<2>1 (Madd_contador_ceros_addsub0012_cy<2>)
+     LUT4:I0->O            2   0.704   0.447  contador_ceros_mux0030<4>11 (N54)
+     MUXF5:S->O            6   0.739   0.844  contador_ceros_mux0030<4>_f5 (Madd_contador_ceros_addsub0014_lut<4>)
+     LUT3:I0->O            3   0.704   0.706  Madd_contador_ceros_addsub0018_cy<4>159 (Madd_contador_ceros_addsub0018_cy<4>159)
+     LUT4:I0->O            1   0.704   0.000  contador_ceros_mux0036<4>891 (contador_ceros_mux0036<4>891)
+     MUXF5:I1->O           2   0.321   0.622  contador_ceros_mux0036<4>89_f5 (contador_ceros_mux0036<4>89)
+     LUT3:I0->O            4   0.704   0.762  contador_ceros_mux0036<4>101 (Madd_contador_ceros_addsub0020_lut<4>)
+     LUT4:I0->O            3   0.704   0.610  contador_ceros_mux0038<5>1 (N14)
+     LUT4:I1->O            1   0.704   0.455  contador_ceros_mux0038<5>57_SW0 (N273)
+     LUT4:I2->O            5   0.704   0.808  contador_ceros_mux0038<5>57 (Madd_contador_ceros_addsub0017_lut<5>)
+     LUT4:I0->O            2   0.704   0.451  contador_ceros_mux0042<6>11 (N24)
+     LUT4:I3->O            7   0.704   0.883  contador_ceros_mux0042<6>31 (Madd_contador_ceros_addsub0021_lut<6>)
+     LUT2:I0->O            1   0.704   0.000  contador_ceros_mux0046<7>_SW11 (contador_ceros_mux0046<7>_SW1)
+     MUXF5:I1->O           1   0.321   0.499  contador_ceros_mux0046<7>_SW1_f5 (N239)
+     LUT4:I1->O            3   0.704   0.706  contador_ceros_mux0046<7> (contador_ceros_mux0046<7>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_mantisa_aux_cmp_lt0000_lut<7> (Mcompar_mantisa_aux_cmp_lt0000_lut<7>)
+     MUXCY:S->O           33   0.864   1.438  Mcompar_mantisa_aux_cmp_lt0000_cy<7> (Mcompar_mantisa_aux_cmp_lt0000_cy<7>1)
+     LUT2:I0->O            1   0.704   0.420  exponente_out<0>21 (error_OBUF)
+     OBUF:I->O                 3.272          error_OBUF (error)
+    ----------------------------------------
+    Total                     37.049ns (21.519ns logic, 15.530ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.46 secs
+ 
+--> 
+
+Total memory usage is 266264 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

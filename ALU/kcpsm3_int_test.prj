@@ -1,0 +1,5 @@
+vhdl work "mux_in.vhd"
+vhdl work "kcpsm3.vhd"
+vhdl work "INT_TEST.VHD"
+vhdl work "Decodificador.vhd"
+vhdl work "kcpsm3_int_test.vhd"
